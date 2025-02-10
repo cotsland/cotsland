@@ -1587,13 +1587,13 @@ input, select, textarea {
 
 /* Video */
 .video-carousel {
-    max-width: 100%;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .video-carousel iframe {
     width: 100%;
-    height: 600px; /* Puedes ajustar la altura según tu preferencia */
+    height: 425px; /* Puedes ajustar la altura según tu preferencia */
     border: none;
 }
 
