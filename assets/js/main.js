@@ -208,9 +208,6 @@
 					});
 
 			}
-
-	})(jQuery);
-
         $(document).ready(function(){
             var $carousel = $('.video-carousel').slick({
                 dots: true,
@@ -248,4 +245,5 @@
                 });
             });
         });
+	})(jQuery);
 
