@@ -212,20 +212,40 @@
 	})(jQuery);
 
         $(document).ready(function(){
-            $('.video-carousel').slick({
+            var $carousel = $('.video-carousel').slick({
                 dots: true,
                 infinite: true,
                 speed: 500,
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                autoplay: false, // Autoplay desactivado para el carrusel
+                autoplay: false,
                 prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
                 nextArrow: '<button type="button" class="slick-next">&#10095;</button>'
             });
 
             // Detener el video actual al cambiar de diapositiva
-            $('.video-carousel').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+            $carousel.on('beforeChange', function(event, slick, currentSlide, nextSlide){
                 var currentIframe = $(slick.$slides[currentSlide]).find('iframe');
                 currentIframe.attr('src', currentIframe.attr('src'));
             });
+
+            // Pausar el carrusel cuando se hace clic en el video
+            $('.video-carousel iframe').on('play', function() {
+                $carousel.slick('slickPause');
+            });
+
+            // Reanudar el carrusel cuando el video termina
+            $('.video-carousel iframe').each(function(){
+                var iframe = this;
+                var player = new YT.Player(iframe, {
+                    events: {
+                        'onStateChange': function(event) {
+                            if (event.data == YT.PlayerState.ENDED) {
+                                $carousel.slick('slickPlay');
+                            }
+                        }
+                    }
+                });
+            });
         });
+
