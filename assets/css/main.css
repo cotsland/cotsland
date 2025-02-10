@@ -1593,8 +1593,7 @@ input, select, textarea {
 
 .video-carousel iframe {
     width: 100%;
-height: 100%;
-/*     height: 425px; /* Puedes ajustar la altura según tu preferencia */ */
+height: 425px; /* Puedes ajustar la altura según tu preferencia */
     border: none;
 }
 
