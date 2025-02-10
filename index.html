@@ -18,74 +18,36 @@
             <a href="https://www.youtube.com/@cotsland" class="icon brands fa-youtube" target="_blank"><span>Youtube</span></a>
             <a href="https://www.instagram.com/cotsland" class="icon brands fa-instagram" target="_blank"><span>Instagram</span></a>
             <a href="https://www.tiktok.com/@jorge_cots" class="icon brands fa-tiktok" target="_blank"><span>TikTok</span></a>
-            <!-- <a href="#contact" class="icon solid fa-envelope" target="_blank"><span>Contacto</span></a> -->
         </nav>
 
         <div id="main">
             <article id="home" class="panel intro">
                 <header>
-                    <br>
-                    <br>
+                    <br><br>
                     <img class="especialUno" src="https://github.com/cotsland/cotsland/blob/main/img/logo%206.png?raw=true" alt="">
-                    <p>Mini documentales, viajes y periodismo de investigación. </p>
+                    <p>Mini documentales, viajes y periodismo de investigación.</p>
                     <br>
                     <a href="mailto:jorge@cotsland.com" class="icon solid fa-envelope" target="_blank"><span> Contacto</span></a>
-                    <!-- <a href="#contact" class="icon solid fa-envelope" target="_blank"><span> Contacto</span></a> -->
                     <hr>
                 </header>
                 <a href="#work" class="jumplink pic">
-                    <!-- <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span> -->
                     <img src="https://github.com/cotsland/cotsland/blob/main/img/jorge_sombrero.JPG?raw=true" alt="" />
                 </a>
             </article>
 
             <article id="work" class="panel">
-                <header>
-                    <!-- <h2>Work</h2> -->
-                </header>
+                <header></header>
                 <section class="video-carousel">
-                                        <div class="video-container" data-id="c1C-c9ThZW4">
-                        <img src="https://img.youtube.com/vi/c1C-c9ThZW4/hqdefault.jpg" alt="Video Thumbnail">
-                        <button class="play-button">▶</button>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/c1C-c9ThZW4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
                     </div>
-                    <div class="video-container" data-id="boH2hWMZfOc">
-                        <img src="https://img.youtube.com/vi/boH2hWMZfOc/hqdefault.jpg" alt="Video Thumbnail">
-                        <button class="play-button">▶</button>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/boH2hWMZfOc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
                     </div>
-                    <div class="video-container" data-id="iAO6ildKqWQ">
-                        <img src="https://img.youtube.com/vi/iAO6ildKqWQ/hqdefault.jpg" alt="Video Thumbnail">
-                        <button class="play-button">▶</button>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/iAO6ildKqWQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
                     </div>
-                    
-<!--                     <div><iframe width="560" height="315" src="https://www.youtube.com/embed/c1C-c9ThZW4" frameborder="0" allowfullscreen loading="lazy"></iframe></div>
-                    <div><iframe width="560" height="315" src="https://www.youtube.com/embed/boH2hWMZfOc" frameborder="0" allowfullscreen loading="lazy"></iframe></div>
-                    <div><iframe width="560" height="315" src="https://www.youtube.com/embed/iAO6ildKqWQ" frameborder="0" allowfullscreen loading="lazy"></iframe></div> -->
                 </section>
-            </article>
-
-            <article id="contact" class="panel">
-                <header>
-                    <h2>Contact Me</h2>
-                </header>
-                <form action="#" method="post">
-                    <div class="row">
-                        <div class="col-6 col-12-medium">
-                            <input type="text" name="name" placeholder="Name" />
-                        </div>
-                        <div class="col-6 col-12-medium">
-                            <input type="text" name="email" placeholder="Email" />
-                        </div>
-                        <div class="col-12">
-                            <input type="text" name="subject" placeholder="Subject" />
-                        </div>
-                        <div class="col-12">
-                            <textarea name="message" placeholder="Message" rows="6"></textarea>
-                        </div>
-                        <div class="col-12">
-                            <input type="submit" value="Send Message" />
-                        </div>
-                    </div>
-                </form>
             </article>
         </div>
 
@@ -106,7 +68,17 @@
                 speed: 500,
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                arrows: true
+                arrows: true,
+                prevArrow: '<button type="button" class="slick-prev">❮</button>',
+                nextArrow: '<button type="button" class="slick-next">❯</button>',
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false
+                        }
+                    }
+                ]
             });
         });
     </script>
