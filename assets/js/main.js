@@ -211,23 +211,21 @@
 
 	})(jQuery);
 
-$(document).ready(function(){
+        $(document).ready(function(){
             $('.video-carousel').slick({
                 dots: true,
                 infinite: true,
                 speed: 500,
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                arrows: true,
-                prevArrow: '<button type="button" class="slick-prev">❮</button>',
-                nextArrow: '<button type="button" class="slick-next">❯</button>',
-                responsive: [
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            arrows: false
-                        }
-                    }
-                ]
+                autoplay: true, // Autoplay desactivado para el carrusel
+                prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
+                nextArrow: '<button type="button" class="slick-next">&#10095;</button>'
+            });
+
+            // Detener el video actual al cambiar de diapositiva
+            $('.video-carousel').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+                var currentIframe = $(slick.$slides[currentSlide]).find('iframe');
+                currentIframe.attr('src', currentIframe.attr('src'));
             });
         });
